@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/prayerFragment">
+
+    <fragment
+        android:id="@+id/prayerFragment"
+        android:name="com.example.prayertimequran.ui.fragments.PrayerFragment"
+        android:label="fragment_prayer"
+        tools:layout="@layout/fragment_prayer" />
+    <fragment
+        android:id="@+id/alarmFragment"
+        android:name="com.example.prayertimequran.ui.fragments.AlarmFragment"
+        android:label="fragment_alarm"
+        tools:layout="@layout/fragment_alarm" />
+    <fragment
+        android:id="@+id/qublaFragment"
+        android:name="com.example.prayertimequran.ui.fragments.QublaFragment"
+        android:label="fragment_qubla"
+        tools:layout="@layout/fragment_qubla" />
+    <fragment
+        android:id="@+id/quranFragment"
+        android:name="com.example.prayertimequran.ui.fragments.QuranFragment"
+        android:label="fragment_kaaba"
+        tools:layout="@layout/fragment_quran" />
+</navigation>

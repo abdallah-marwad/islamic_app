@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_background"
+    tools:context=".ui.fragments.PrayerFragment">
+
+    <androidx.cardview.widget.CardView
+    android:id="@+id/main_card_fajr"
+    android:layout_width="match_parent"
+    app:layout_constraintBottom_toTopOf="@id/main_card_shoroke"
+    style="@style/main_card"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/main_fajr_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fajr"
+            style="@style/main_text_in_card"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/main_fajr_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            style="@style/main_text_in_card"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card_shoroke"
+        android:layout_width="match_parent"
+        style="@style/main_card"
+
+        app:layout_constraintBottom_toTopOf="@id/main_card_dohr"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/main_Shoroke_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoroke"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/main_Shoroke_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card_dohr"
+        android:layout_width="match_parent"
+        style="@style/main_card"
+
+        app:layout_constraintBottom_toTopOf="@id/main_card_asr"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/main_dohr_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dohr"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/main_dohr_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card_asr"
+        android:layout_width="match_parent"
+        style="@style/main_card"
+
+        app:layout_constraintBottom_toTopOf="@id/main_card_maghreb"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/main_asr_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/asr"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/main_asr_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card_maghreb"
+        android:layout_width="match_parent"
+        style="@style/main_card"
+        app:layout_constraintBottom_toTopOf="@id/main_card_isha"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/main_maghreb_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/maghreb"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/main_maghreb_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/main_text_in_card"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card_isha"
+        style="@style/main_card"
+        android:layout_width="match_parent"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/main_isha_txt"
+                style="@style/main_text_in_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/isha" />
+
+            <TextView
+                android:id="@+id/main_isha_value"
+                style="@style/main_text_in_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">  الـصلاه و القرآن</string>
+    <string name="alarm">التنبيهات</string>
+    <string name="prayer">الـصلاه</string>
+    <string name="qebla">القـبله</string>
+    <string name="quran">الـقرآن</string>
+    <string name="fajr">الـفجر :</string>
+    <string name="shoroke">الـشروق :</string>
+    <string name="dohr">الظـهر :</string>
+    <string name="asr">الـعصر :</string>
+    <string name="maghreb">الـمغرب :</string>
+    <string name="isha">الـعشاء :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

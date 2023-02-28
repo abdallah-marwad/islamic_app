@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/prayerFragment"
+        android:title="@string/prayer"
+        android:icon="@drawable/mosque"
+        />
+    <item
+        android:id="@+id/alarmFragment"
+        android:title="@string/alarm"
+        android:icon="@drawable/alarmclock"
+
+        />
+    <item
+        android:id="@+id/qublaFragment"
+        android:title="@string/qebla"
+        android:icon="@drawable/kaaba"
+
+        />
+    <item
+        android:id="@+id/quranFragment"
+        android:title="@string/quran"
+        android:icon="@drawable/quran"
+
+        />
+
+
+</menu>
