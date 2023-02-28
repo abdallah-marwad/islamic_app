@@ -10,5 +10,7 @@
     <!-- main frag-->
     <color name="card_background">#E6226326</color>
     <color name="text_color">@color/white</color>
+    <color name="ed_background">#54979797</color>
+
 
 </resources>

@@ -25,4 +25,9 @@
         android:name="com.example.prayertimequran.ui.fragments.QuranFragment"
         android:label="fragment_kaaba"
         tools:layout="@layout/fragment_quran" />
+    <fragment
+        android:id="@+id/azkarFragment"
+        android:name="com.example.prayertimequran.ui.fragments.azkarHome.AzkarFragment"
+        android:label="fragment_azkar"
+        tools:layout="@layout/fragment_azkar" />
 </navigation>

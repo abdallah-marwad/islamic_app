@@ -30,7 +30,7 @@
 
     <style name="main_text_in_card">
         <item name="android:textSize">@dimen/_15ssp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/text_color</item>
         <item name="android:layout_margin">@dimen/_10sdp</item>
     </style>
 </resources>

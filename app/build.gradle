@@ -57,4 +57,5 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
     //shared Preference
     implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation 'com.google.code.gson:gson:2.9.0'
 }

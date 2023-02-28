@@ -25,9 +25,9 @@
 
         />
     <item
-        android:id="@+id/quranFragment"
+        android:id="@+id/azkarFragment"
         android:title="@string/azkar"
-        android:icon="@drawable/quran"
+        android:icon="@drawable/tasbih"
 
         />
 
