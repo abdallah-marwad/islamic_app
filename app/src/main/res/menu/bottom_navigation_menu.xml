@@ -24,6 +24,12 @@
         android:icon="@drawable/quran"
 
         />
+    <item
+        android:id="@+id/quranFragment"
+        android:title="@string/azkar"
+        android:icon="@drawable/quran"
+
+        />
 
 
 </menu>
