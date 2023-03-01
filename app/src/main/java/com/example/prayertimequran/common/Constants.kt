@@ -8,5 +8,6 @@ object Constants {
       const val  ASR = "asr"
       const val  MAGHREB = "magrheb"
       const val  ISHA = "isha"
+      const val  SEARCH_DELAY = 600L
 
 }

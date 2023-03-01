@@ -1,4 +1,4 @@
-package com.example.prayertimequran.ui.fragments
+package com.example.prayertimequran.ui.fragments.prayer
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -32,6 +32,7 @@ class PrayerFragment : Fragment(R.layout.fragment_prayer) {
     private lateinit var userLocation: UserLocation
     private lateinit var sharedPreferences : SharedPreferences
     private val LOCATION_TOKE = "location toke"
+    private val  FJR = "fjr"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +44,8 @@ class PrayerFragment : Fragment(R.layout.fragment_prayer) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity() .applicationContext)
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().applicationContext)
+//        sharedPreferences.edit().clear().commit()
         takePermissionAndSetPrayerTime()
     }
 
@@ -85,15 +87,15 @@ class PrayerFragment : Fragment(R.layout.fragment_prayer) {
         with(sharedPreferences.edit()) {
             putBoolean(LOCATION_TOKE, toke)
             Log.d("test" , "Done Change Shared Value To ${toke}")
-            commit() // may error here
+            apply() // may error here
         }
     }
-    private fun setPrayerTimesInShared(prayerTime: String , prayerName : String) {
+    private fun setPrayerTimesInShared(prayerName: String , prayerTime : String) {
         with(sharedPreferences.edit()) {
             putString(prayerName, prayerTime)
             Log.d("test" , "the value of  $prayerName is : $prayerTime  ")
 
-            commit() // may error here
+            apply() // may error here
         }
     }
 
@@ -133,6 +135,7 @@ class PrayerFragment : Fragment(R.layout.fragment_prayer) {
         val prayerTimes = PrayerTimes(coordinates, date, params)
         val dateFormat =
             android.text.format.DateFormat.getTimeFormat(requireActivity().applicationContext);
+
         setTimesToSharedFun(prayerTimes , dateFormat)
         setTimeToCard()
     }

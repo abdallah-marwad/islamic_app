@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/app_background"
-    tools:context=".ui.fragments.PrayerFragment">
+    tools:context=".ui.fragments.prayer.PrayerFragment">
 
     <androidx.cardview.widget.CardView
     android:id="@+id/main_card_fajr"
