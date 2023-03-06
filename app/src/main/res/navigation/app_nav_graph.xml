@@ -22,9 +22,9 @@
         tools:layout="@layout/fragment_qubla" />
     <fragment
         android:id="@+id/quranFragment"
-        android:name="com.example.prayertimequran.ui.fragments.quran.QuranFragment"
+        android:name="com.example.prayertimequran.ui.fragments.quran.quranContainer.QuranContainerFragment"
         android:label="fragment_kaaba"
-        tools:layout="@layout/fragment_quran" />
+        tools:layout="@layout/fragment_page_quran" />
     <fragment
         android:id="@+id/azkarFragment"
         android:name="com.example.prayertimequran.ui.fragments.azkarHome.home.AzkarFragment"

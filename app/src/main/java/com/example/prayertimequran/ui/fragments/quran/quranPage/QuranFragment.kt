@@ -9,13 +9,11 @@ import android.widget.ImageView
 import com.example.prayertimequran.R
 import com.example.prayertimequran.data.Quran.QuranPagePresenter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
-class QuranFragment : Fragment() {
+class QuranPageFragment(private var pageNumber:Int ) : Fragment() {
 
     private lateinit var img : ImageView
     private lateinit var quranPagePresenter: QuranPagePresenter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,13 +26,13 @@ class QuranFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         quranPagePresenter= QuranPagePresenter(requireContext().applicationContext)
-        return inflater.inflate(R.layout.fragment_quran, container, false)
+        return inflater.inflate(R.layout.fragment_page_quran, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         img = view.findViewById(R.id.frag_quran_img)
-        img.setImageDrawable(quranPagePresenter.getQuranImageByPageNumber(10))
+        img.setImageDrawable(quranPagePresenter.getQuranImageByPageNumber(pageNumber))
     }
 
 

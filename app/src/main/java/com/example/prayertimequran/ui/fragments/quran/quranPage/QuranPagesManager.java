@@ -1,4 +1,4 @@
-package com.example.prayertimequran.ui.fragments.quran;
+package com.example.prayertimequran.ui.fragments.quran.quranPage;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
