@@ -32,10 +32,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.d("test" , "onCreate Activity")
 
        setUpNavController()
 
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("test" , "onStart Activity")
     }
     private fun setUpNavController(){
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.prayer_frag_container) as NavHostFragment

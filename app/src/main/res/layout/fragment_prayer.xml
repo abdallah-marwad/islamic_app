@@ -1,166 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/app_background"
     tools:context=".ui.fragments.prayer.PrayerFragment">
 
+    <TextView
+        android:id="@+id/prayerFrag_textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2/11/2020"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prayerFrag_textLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hehia Sharkia"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prayerFrag_textDate" />
+
+    <TextView
+        android:id="@+id/prayerFrag_textTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="9:50"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prayerFrag_textLocation" />
+
     <androidx.cardview.widget.CardView
-    android:id="@+id/main_card_fajr"
-    android:layout_width="match_parent"
-    app:layout_constraintBottom_toTopOf="@id/main_card_shoroke"
-    style="@style/main_card"
-    android:orientation="horizontal"
-    >
-    <LinearLayout
+        android:id="@+id/main_card_fajr"
+        style="@style/main_card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:orientation="horizontal"
-        >
-        <TextView
-            android:id="@+id/main_fajr_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fajr"
-            style="@style/main_text_in_card"
-            android:layout_gravity="center_vertical"
-            />
-        <TextView
-            android:id="@+id/main_fajr_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            style="@style/main_text_in_card"
-            android:layout_gravity="center_vertical"
-            />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+        app:layout_constraintBottom_toTopOf="@id/main_card_shoroke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_fajr_txt"
+                style="@style/main_text_in_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/fajr" />
+
+            <TextView
+                android:id="@+id/main_fajr_value"
+                style="@style/main_text_in_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/main_card_shoroke"
-        android:layout_width="match_parent"
         style="@style/main_card"
+        android:layout_width="match_parent"
 
-        app:layout_constraintBottom_toTopOf="@id/main_card_dohr"
         android:orientation="horizontal"
-        >
+        app:layout_constraintBottom_toTopOf="@id/main_card_dohr">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
 
             >
+
             <TextView
                 android:id="@+id/main_Shoroke_txt"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/shoroke"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="@string/shoroke" />
+
             <TextView
                 android:id="@+id/main_Shoroke_value"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="0" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/main_card_dohr"
-        android:layout_width="match_parent"
         style="@style/main_card"
+        android:layout_width="match_parent"
 
-        app:layout_constraintBottom_toTopOf="@id/main_card_asr"
         android:orientation="horizontal"
-        >
+        app:layout_constraintBottom_toTopOf="@id/main_card_asr">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/main_dohr_txt"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dohr"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="@string/dohr" />
+
             <TextView
                 android:id="@+id/main_dohr_value"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="0" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/main_card_asr"
-        android:layout_width="match_parent"
         style="@style/main_card"
+        android:layout_width="match_parent"
 
-        app:layout_constraintBottom_toTopOf="@id/main_card_maghreb"
         android:orientation="horizontal"
-        >
+        app:layout_constraintBottom_toTopOf="@id/main_card_maghreb">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
 
             >
+
             <TextView
                 android:id="@+id/main_asr_txt"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/asr"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="@string/asr" />
+
             <TextView
                 android:id="@+id/main_asr_value"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="0" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/main_card_maghreb"
-        android:layout_width="match_parent"
         style="@style/main_card"
-        app:layout_constraintBottom_toTopOf="@id/main_card_isha"
+        android:layout_width="match_parent"
         android:orientation="horizontal"
-        >
+        app:layout_constraintBottom_toTopOf="@id/main_card_isha">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
 
             >
+
             <TextView
                 android:id="@+id/main_maghreb_txt"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/maghreb"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="@string/maghreb" />
+
             <TextView
                 android:id="@+id/main_maghreb_value"
+                style="@style/main_text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                style="@style/main_text_in_card"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="0" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -197,7 +229,6 @@
                 android:text="0" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

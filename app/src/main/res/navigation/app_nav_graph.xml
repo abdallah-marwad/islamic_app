@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_qubla" />
     <fragment
         android:id="@+id/quranFragment"
-        android:name="com.example.prayertimequran.ui.fragments.QuranFragment"
+        android:name="com.example.prayertimequran.ui.fragments.quran.QuranFragment"
         android:label="fragment_kaaba"
         tools:layout="@layout/fragment_quran" />
     <fragment
@@ -33,13 +33,14 @@
         <action
             android:id="@+id/action_azkarFragment_to_azkarDetailsFragment"
             app:destination="@id/azkarDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/azkarDetailsFragment"
+        android:name="com.example.prayertimequran.ui.fragments.azkarHome.details.AzkarDetailsFragment"
+        android:label="fragment_azkar_details"
+        tools:layout="@layout/fragment_azkar_details" >
         <argument
             android:name="TheNameOfZekr"
             app:argType="string" />
     </fragment>
-    <fragment
-        android:id="@+id/azkarDetailsFragment"
-        android:name="com.example.prayertimequran.ui.fragments.details.AzkarDetailsFragment"
-        android:label="fragment_azkar_details"
-        tools:layout="@layout/fragment_azkar_details" />
 </navigation>

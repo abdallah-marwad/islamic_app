@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
 import android.util.Log
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -15,7 +16,7 @@ import com.google.android.gms.tasks.CancellationTokenSource
 import com.google.android.gms.tasks.OnTokenCanceledListener
 
 class UserLocation {
-     var location : MutableLiveData<Location> = MutableLiveData()
+    var location: MutableLiveData<Location> = MutableLiveData()
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
     fun getLocationByFused(
@@ -30,14 +31,34 @@ class UserLocation {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            Log.d("test" , "permission not taken")
+            Log.d("test", "permission not taken")
             return
         }
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
-        fusedLocationProviderClient.lastLocation
-            .addOnSuccessListener { location : Location? ->
-                this.location.value = location
+        fusedLocationProviderClient.getCurrentLocation(
+            Priority.PRIORITY_HIGH_ACCURACY,
+            object : CancellationToken() {
+                override fun onCanceledRequested(p0: OnTokenCanceledListener) =
+                    CancellationTokenSource().token
+
+                override fun isCancellationRequested() = false
+            })
+            .addOnSuccessListener { location: Location? ->
+                if (location == null)
+                    Toast.makeText(context, "open your Gps ", Toast.LENGTH_SHORT).show()
+                else {
+                    Log.d("test", "set Location value")
+                    this.location.value = location
+                }
+
             }
 
-    }
+//        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
+//        fusedLocationProviderClient.lastLocation
+//            .addOnSuccessListener { location: Location? ->
+//                Log.d("test", "set Location value")
+//                this.location.value = location
+//            }
+//
+}
 }

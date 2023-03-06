@@ -5,17 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.azkarHome.home.AzkarFragment">
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/azkarFrag_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/azkarFrag_search"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        app:layout_constraintTop_toBottomOf="@id/azkarFrag_tab_layout"
+        app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/edittext_background"
         android:drawableStart="@drawable/ic_search_edittext"
         android:drawablePadding="@dimen/_6sdp"

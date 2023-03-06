@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.details.AzkarDetailsFragment"
+    tools:context=".ui.fragments.azkarHome.details.AzkarDetailsFragment"
     android:padding="@dimen/_7sdp"
     android:background="@drawable/app_background"
 

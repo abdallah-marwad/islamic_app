@@ -32,6 +32,13 @@
                 android:layout_marginTop="@dimen/_3sdp"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/_14ssp" />
+            <TextView
+                android:id="@+id/customZekrDetails_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp" />
 
             <TextView
                 android:id="@+id/customZekrDetails_description"

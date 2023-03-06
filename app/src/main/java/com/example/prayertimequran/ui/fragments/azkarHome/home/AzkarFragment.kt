@@ -68,9 +68,12 @@ class AzkarFragment : Fragment() {
 
     private fun zkerOnClick(){
         adapter.adapterOnClick = {
-//            findNavController().navigate(
-//
-//            )
+            Log.d("test" , it)
+            findNavController().navigate(
+                AzkarFragmentDirections.actionAzkarFragmentToAzkarDetailsFragment(it)
+
+            )
+
         }
     }
     private fun searchInArrayList(arrayList: ArrayList<AzkarType>){
@@ -101,7 +104,6 @@ class AzkarFragment : Fragment() {
         super.onDetach()
         azkarLiveData = null
         coroutineScope = null
-        presenter = null
     }
 
 

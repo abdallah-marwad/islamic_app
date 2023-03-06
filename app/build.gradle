@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.prayertimequran"
-        minSdk 24
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -44,6 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+
     // prayer time formula
     implementation 'com.batoulapps.adhan:adhan:1.2.1'
     // SDP Library
@@ -55,7 +57,11 @@ dependencies {
     // Navigation Components
     implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
     implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+
     //shared Preference
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation 'com.google.code.gson:gson:2.9.0'
+
+    // Islamic Date
+    implementation group: 'net.time4j', name: 'time4j-android', version: '4.8-2021a'
 }
