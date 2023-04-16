@@ -9,7 +9,7 @@ Islamic app with quran , prayer time and azkar
 <img src="https://user-images.githubusercontent.com/115652759/232264432-07ed6421-52b3-4d14-af73-ce9c9e68713b.png" width="200" height="350">
 
 <img src="https://user-images.githubusercontent.com/115652759/232264510-9bc4dc8b-56db-4de6-8cb9-3365fe97de66.png" width="200" height="350">
-<img src="https://user-images.githubusercontent.com/115652759/232264488-ec4d302d-aae2-4800-ab4c-3eaab0021ba5.png)" width="200" height="350">
+<img src="https://user-images.githubusercontent.com/115652759/232264683-ee98e402-486f-4dc3-98e3-c6c5bdbdccaf.png" width="200" height="350">
 <img src="https://user-images.githubusercontent.com/115652759/232264532-5efef8ab-1a6a-4ba7-9d4a-7b51b51c1af8.png" width="200" height="350">
 <img src="https://user-images.githubusercontent.com/115652759/232264568-6f8f2059-f415-46f7-9cb2-7c83fceb7e53.png" width="200" height="350">
 <img src="https://user-images.githubusercontent.com/115652759/232264581-b4ed6b75-02c4-4fc6-879c-042313871ec8.png" width="200" height="350">
