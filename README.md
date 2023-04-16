@@ -1,14 +1,14 @@
-# islamic_app
+# القرءان و الصلاه
 Islamic app with quran , prayer time and azkar
 
-• Islamic application contains quran with soraa and juzz categories with
+- Islamic application contains quran with soraa and juzz categories with
 the possibility of searching in the quran
-• Also contains Prayer times with alerts to it also display the remaining
+- Also contains Prayer times with alerts to it also display the remaining
 time for the next prayer with timer
-• View a group of azkar with the ability to search in them
-• The app consist of 12 screen
+- View a group of azkar with the ability to search in them
+- The app consist of 12 screen
 
-
+**Screenshots**
 <img src="https://user-images.githubusercontent.com/115652759/232264231-66af3a58-250f-4554-98eb-a912cc76fa8a.png" width="200" height="350">
 
 <img src="https://user-images.githubusercontent.com/115652759/232264432-07ed6421-52b3-4d14-af73-ce9c9e68713b.png" width="200" height="350">
