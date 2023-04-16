@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.quran.quranCategories.quranHome.viewPagerFrags.soraa.SoraaFragment">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/custom_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+        <include
+            layout="@layout/sora_item_place_holder"
+            />
+        <include
+            layout="@layout/sora_item_place_holder"
+            />
+        <include
+            layout="@layout/sora_item_place_holder"
+            /><include
+            layout="@layout/sora_item_place_holder"
+            /><include
+            layout="@layout/sora_item_place_holder"
+            /><include
+            layout="@layout/sora_item_place_holder"
+            /><include
+            layout="@layout/sora_item_place_holder"
+            /><include
+            layout="@layout/sora_item_place_holder"
+            />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/soraaFrag_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/layout_animation"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

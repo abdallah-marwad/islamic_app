@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:name=".common.MyApplication"
         android:allowBackup="true"
@@ -13,16 +18,43 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.PrayerTimeQuran"
-        tools:targetApi="31">
+        tools:targetApi="33">
         <activity
-            android:name=".ui.MainActivity"
-            android:exported="true">
+            android:name=".ui.activitys.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/Theme.PrayerTimeQuran.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".data.azanNotification.AlarmService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activitys.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.activitys.setupActivity.SetUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        </activity>
+
+        <receiver android:name=".data.azanNotification.AzanNotificationReceiver" />
     </application>
 
 </manifest>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_quran_container2_scene"
+    tools:context=".ui.fragments.quran.quranCategories.quranCategoryContainer.QuranContainerFragment">
+
+    <TextView
+        android:id="@+id/quranFrag_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/ic_search_edittext"
+        android:drawablePadding="@dimen/_6sdp"
+        android:text="@string/search_aya"
+        android:padding="@dimen/_4sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray_icons"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/fragQuranContainer_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quranFrag_search"
+        app:tabGravity="fill" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/quranHome_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragQuranContainer_tablayout" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

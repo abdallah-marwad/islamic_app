@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.quran.quranTfseer.TfseerFragment">
+
+    <include
+        android:id="@+id/tfseerFrag_appbar"
+        layout="@layout/custom_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragTfseer_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tfseerFrag_appbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

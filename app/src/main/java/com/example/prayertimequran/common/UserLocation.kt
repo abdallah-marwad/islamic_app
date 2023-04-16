@@ -31,7 +31,6 @@ class UserLocation {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            Log.d("test", "permission not taken")
             return
         }
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
@@ -45,20 +44,13 @@ class UserLocation {
             })
             .addOnSuccessListener { location: Location? ->
                 if (location == null)
-                    Toast.makeText(context, "open your Gps ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "قم بتفعيل الموقع", Toast.LENGTH_SHORT).show()
                 else {
-                    Log.d("test", "set Location value")
+//                    Log.d("test", "set Location value")
                     this.location.value = location
                 }
 
             }
 
-//        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
-//        fusedLocationProviderClient.lastLocation
-//            .addOnSuccessListener { location: Location? ->
-//                Log.d("test", "set Location value")
-//                this.location.value = location
-//            }
-//
 }
 }

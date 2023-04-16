@@ -1,234 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prayer_swip"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/app_background"
     tools:context=".ui.fragments.prayer.PrayerFragment">
 
-    <TextView
-        android:id="@+id/prayerFrag_textDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2/11/2020"
-        android:layout_margin="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/prayerFrag_textLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hehia Sharkia"
-        android:layout_margin="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prayerFrag_textDate" />
-
-    <TextView
-        android:id="@+id/prayerFrag_textTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        android:text="9:50"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/prayerFrag_textLocation" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/main_card_fajr"
-        style="@style/main_card"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/main_card_shoroke">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/main_card_data"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.30"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/main_fajr_txt"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/fajr" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_mosqu_prayer">
 
-            <TextView
-                android:id="@+id/main_fajr_value"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="0" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/prayerFrag_textDateHejri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="2/11/2020"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/main_card_shoroke"
-        style="@style/main_card"
-        android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/prayerFrag_textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="2/11/2020"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/prayerFrag_textDateHejri" />
 
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/main_card_dohr">
+                <TextView
+                    android:id="@+id/prayerFrag_textLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="لا يوجد موقع"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prayerFrag_textDate"
+                    app:layout_constraintWidth_percent="0.7" />
 
-        <LinearLayout
+                <TextView
+                    android:id="@+id/prayerFrag_textTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:text="00:00:00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/prayerFrag_textLocation" />
+
+                <TextView
+                    android:id="@+id/prayerFrag_textPrayerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="الصلاه القادمه "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/prayerFrag_textLocation" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/main_fajr_txt"
+            style="@style/main_text_in_card"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/moonlight"
+
+            android:drawablePadding="@dimen/_8sdp"
+            android:text="@string/fajr"
+            app:layout_constraintBottom_toTopOf="@+id/main_Shoroke_txt"
+
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view_underFjr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="1dp"
+            android:background="@color/gold"
+            app:layout_constraintBottom_toTopOf="@id/main_Shoroke_txt"
+            app:layout_constraintTop_toBottomOf="@+id/prayer_lottie_fajr" />
 
-            >
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/prayer_lottie_fajr"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
 
-            <TextView
-                android:id="@+id/main_Shoroke_txt"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/shoroke" />
+            app:layout_constraintBottom_toBottomOf="@+id/main_fajr_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
 
-            <TextView
-                android:id="@+id/main_Shoroke_value"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="0" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toTopOf="@id/main_fajr_txt"
+            app:lottie_rawRes="@raw/switcher" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/main_card_dohr"
-        style="@style/main_card"
-        android:layout_width="match_parent"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/prayer_lottie_shoroke"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_Shoroke_txt"
+            app:layout_constraintEnd_toEndOf="parent"
 
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/main_card_asr">
+            app:layout_constraintTop_toTopOf="@id/main_Shoroke_txt"
+            app:lottie_rawRes="@raw/switcher" />
 
-        <LinearLayout
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/prayer_lottie_duhr"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_dohr_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+
+            app:layout_constraintTop_toTopOf="@id/main_dohr_txt"
+            app:lottie_rawRes="@raw/switcher" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/prayer_lottie_asr"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_asr_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+
+            app:layout_constraintTop_toTopOf="@id/main_asr_txt"
+            app:lottie_rawRes="@raw/switcher" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/prayer_lottie_maghredb"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_maghreb_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+
+            app:layout_constraintTop_toTopOf="@id/main_maghreb_txt"
+            app:lottie_rawRes="@raw/switcher" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/prayer_lottie_isha"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_isha_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintTop_toTopOf="@id/main_isha_txt"
+            app:lottie_rawRes="@raw/switcher" />
+
+        <TextView
+            android:id="@+id/main_Shoroke_txt"
+            style="@style/main_text_in_card"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/rising_sun_new_app"
+            android:text="@string/shoroke"
+            app:layout_constraintBottom_toTopOf="@id/main_dohr_txt"
+            app:layout_constraintHeight_percent="0.06"
+
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view_underDohr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="1dp"
+            android:background="@color/gold"
+            app:layout_constraintBottom_toTopOf="@id/main_dohr_txt"
+            app:layout_constraintTop_toBottomOf="@+id/prayer_lottie_shoroke" />
 
-            <TextView
-                android:id="@+id/main_dohr_txt"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/dohr" />
 
-            <TextView
-                android:id="@+id/main_dohr_value"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="0" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/main_dohr_txt"
+            style="@style/main_text_in_card"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/sun_app_dohr"
+            android:text="@string/dohr"
+            app:layout_constraintBottom_toTopOf="@id/main_asr_txt"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/main_card_asr"
-        style="@style/main_card"
-        android:layout_width="match_parent"
 
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/main_card_maghreb">
-
-        <LinearLayout
+        <View
+            android:id="@+id/view_underasr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="1dp"
+            android:background="@color/gold"
+            app:layout_constraintBottom_toTopOf="@id/main_asr_txt"
+            app:layout_constraintTop_toBottomOf="@+id/prayer_lottie_duhr" />
 
-            >
 
-            <TextView
-                android:id="@+id/main_asr_txt"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/asr" />
+        <TextView
+            android:id="@+id/main_asr_txt"
+            style="@style/main_text_in_card"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/sun_asr_new_app"
+            android:text="@string/asr"
+            app:layout_constraintBottom_toTopOf="@id/main_maghreb_txt"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/main_asr_value"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="0" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/main_card_maghreb"
-        style="@style/main_card"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/main_card_isha">
-
-        <LinearLayout
+        <View
+            android:id="@+id/view_underMaghreb"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="1dp"
+            android:background="@color/gold"
+            app:layout_constraintBottom_toTopOf="@id/main_maghreb_txt"
+            app:layout_constraintTop_toBottomOf="@+id/prayer_lottie_asr" />
 
-            >
 
-            <TextView
-                android:id="@+id/main_maghreb_txt"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/maghreb" />
+        <TextView
+            android:id="@+id/main_maghreb_txt"
+            style="@style/main_text_in_card"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/sun_set_application_new"
+            android:text="@string/maghreb"
+            app:layout_constraintBottom_toTopOf="@id/main_isha_txt"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/main_maghreb_value"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="0" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/main_card_isha"
-        style="@style/main_card"
-        android:layout_width="match_parent"
-
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="10dp">
-
-        <LinearLayout
+        <View
+            android:id="@+id/view3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="1dp"
+            android:background="@color/gold"
+            app:layout_constraintBottom_toTopOf="@id/main_isha_txt"
+            app:layout_constraintTop_toBottomOf="@+id/prayer_lottie_maghredb" />
 
-            >
+        <TextView
+            android:id="@+id/main_isha_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
 
-            <TextView
-                android:id="@+id/main_isha_txt"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/isha" />
-
-            <TextView
-                android:id="@+id/main_isha_value"
-                style="@style/main_text_in_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="0" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:drawableStart="@drawable/moon_night"
+            android:drawablePadding="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="@string/isha"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

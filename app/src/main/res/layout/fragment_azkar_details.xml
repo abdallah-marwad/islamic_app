@@ -4,28 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.azkarHome.details.AzkarDetailsFragment"
-    android:padding="@dimen/_7sdp"
-    android:background="@drawable/app_background"
-
+    tools:context=".ui.fragments.azkar.details.AzkarDetailsFragment"
     >
-
-    <TextView
-        android:id="@+id/azkarFragDetails_category"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/_17ssp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="التسبيح والتحميد والتهليل"
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/custom_toolbar"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="6dp" />
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/azkarFragDetails_rv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/_4sdp"
-        app:layout_constraintTop_toBottomOf="@id/azkarFragDetails_category"
-        />
+        android:layoutAnimation="@anim/layout_animation"
+        android:padding="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

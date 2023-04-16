@@ -6,11 +6,22 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="black_obasity">#D8000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bottom_quranPage_bg">#E8FAE8</color>
     <!-- main frag-->
-    <color name="card_background">#E6226326</color>
-    <color name="text_color">@color/white</color>
-    <color name="ed_background">#54979797</color>
+    <color name="card_background1">#005C2F</color>
+    <color name="card_background">#1F9E43</color>
+    <color name="appbar">#DDDDDD</color>
+    <color name="appbar_light_green">#1F9E43</color>
+    <color name="text_color">@color/black</color>
+    <color name="ed_background">#DDDDDD</color>
+    <color name="gray_with_obasity">#F5979797</color>
+    <color name="gray_icons">#575656</color>
+    <color name="shimmer">#DDDDDD</color>
+    <color name="bej">#EAC37E</color>
+    <color name="gray_rose">#F8E5D4</color>
+    <color name="gold">#CC9902</color>
 
 
 </resources>

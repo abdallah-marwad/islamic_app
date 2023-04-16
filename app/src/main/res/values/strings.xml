@@ -14,4 +14,49 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="azkar">الأذكار</string>
     <string name="search">أبحث</string>
+    <string name="search_aya">بحث بالأيه</string>
+    <string name="saved_pic_txt">علامات مرجعيه</string>
+    <string name="tfseer_page_txt">تفسير الصفحه</string>
+    <string name="serch_with_aya_page_txt">البحث بالأيه</string>
+    <string name="index_page_txt">الفهرس</string>
+    <string name="Juzz_page_txt">الاجزاء</string>
+    <string name="adding">إضافه</string>
+    <string name="tfseer_almoysser">تفسير الميسر</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="change_location">تغيير المكان </string>
+    <string name="send_msg">السماح للتطبيق بارسال الاشعارات</string>
+    <string name="about_us">معلومات عنا</string>
+    <string name="recources">المصادر المستخدمه</string>
+    <string name="settings">الإعدادات</string>
+    <string name="start">إبدء الان</string>
+    <string name="identification">استمتع بقراءه القران مع التفسير والكثير من الاذكار والادعيه بالإضافه لدليلك الدقيق بمواقيت الصلاه</string>
+    <string name="finish_quran">فلا نعلم دعاء مخصوصًا لختم القرآن ثبت عن النبي صلى الله عليه وسلم أنه كان يدعو به، أو أرشد غيره إليه، لكن يستحب لمن قرأ القرآن أن يدعو بعد قراءته بما شاء من خيري الدنيا والآخرة، ويسأل الله من فضله؛ لما رواه أحمد، والطبراني في الكبير عن عمران بن حصين أن رسول الله صلى الله عليه وسلم قال: اقرؤوا القرآن، وسلوا الله به، قبل أن يأتي قوم يقرؤون القرآن، فيسألون به الناس. ولما ثبت عن أنس بن مالك -رضي الله عنه- أنه كان إذا ختم القرآن جمع ولده، وأهل بيته، فدعا بهم.</string>
+    <string name="ktma_doaa">دعاء ختم القرءان</string>
+
+    <string-array name="countries">
+        <item>تحديد المنطقه لحساب الصلاوات  </item>
+        <item>الهيئه المصريه العامه للمساحه</item>
+        <item>قطر</item>
+        <item>الإمارات العربيه المتحده</item>
+        <item>أم القرى</item>
+        <item>سنغافوره</item>
+        <item>شمال امريكا</item>
+        <item>الكويت</item>
+        <item>الرابطة العالمية الإسلامية</item>
+        <item>لجنة رؤية القمر</item>
+        <item>كراتشي</item>
+        <item>أخرى</item>
+    </string-array>
+<!-- Setting frag-->
+    <string name="manual_refresh">تحديث البيانات يدويا</string>
+    <string name="refresh_txt">تحديث  </string>
+    <string name="dont_refresh">تخطي  </string>
+    <string name="refresh_dialog_msg">في حاله لم يتم تحديث بيانات الصلاوات او توقفت المنبات بسبب عطل ما قم بالتحديث يدويا وستتم حل المشكله .</string>
 </resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.settings.SettingFragment">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/custom_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/change_location"
+        android:layout_width="match_parent"
+        style="@style/text_frag_setting_style"
+        android:drawableStart="@drawable/edit_location"
+        android:text="@string/change_location"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/change_location"
+        />
+    <TextView
+        android:id="@+id/take_notification_permission"
+
+        android:layout_width="match_parent"
+        style="@style/text_frag_setting_style"
+        android:drawableStart="@drawable/edit_notifications"
+        android:text="@string/send_msg"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/change_location" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/take_notification_permission"
+        />
+
+
+    <TextView
+        android:id="@+id/quran_finish"
+        style="@style/text_frag_setting_style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/finish_quran"
+        android:text="@string/ktma_doaa"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/take_notification_permission" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/quran_finish"
+        />
+    <TextView
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        style="@style/text_frag_setting_style"
+        android:text="تحديث مواقيت الصلوات والمنبه"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/quran_finish"
+        app:drawableStartCompat="@drawable/refresh" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/refresh"
+        />
+    <TextView
+        android:id="@+id/aboutUs"
+        android:layout_width="match_parent"
+        style="@style/text_frag_setting_style"
+        android:drawableStart="@drawable/baseline_info_24"
+        android:text="@string/about_us"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/refresh" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/aboutUs"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

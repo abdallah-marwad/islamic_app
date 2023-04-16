@@ -1,14 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.quran.QuranFragment">
+    app:layoutDescription="@xml/fragment_page_quran_scene">
 
     <ImageView
         android:id="@+id/frag_quran_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:scaleType="fitXY"
 
-</FrameLayout>
+        tools:layout_editor_absoluteX="30dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_constraint_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/text_frag_quran_page_frame"
+        android:backgroundTint="@color/white"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.17">
+
+        <TextView
+            android:id="@+id/fragQuran_search"
+            style="@style/text_frag_quran_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/serch_with_aya_page_txt"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toBottomOf="@+id/fragQuran_Juzz"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <TextView
+            android:id="@+id/fragQuran_Juzz"
+            style="@style/text_frag_quran_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/Juzz_page_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <TextView
+            android:id="@+id/fragQuran_Soraa"
+            style="@style/text_frag_quran_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/index_page_txt"
+            app:layout_constraintEnd_toStartOf="@+id/view4"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toBottomOf="@+id/fragQuran_Saved"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <TextView
+            android:id="@+id/fragQuran_Saved"
+            style="@style/text_frag_quran_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/saved_pic_txt"
+            app:layout_constraintEnd_toStartOf="@+id/view4"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <TextView
+            android:id="@+id/fragQuran_tafser"
+            style="@style/text_frag_quran_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+
+            android:text="@string/tfseer_page_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <TextView
+            android:id="@+id/fragQuran_adding"
+            style="@style/text_frag_quran_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/adding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view4"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/savedLottie"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.06"
+            app:lottie_rawRes="@raw/bookmark" />
+        <ImageView
+            android:id="@+id/fehres_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/quran_fhres_quran_page"
+
+            app:layout_constraintBottom_toTopOf="@id/savedLottie"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.06"
+           />
+        <ImageView
+            android:id="@+id/saved_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/saved_quran_page"
+            app:layout_constraintBottom_toTopOf="@id/fehres_icon"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.06"
+            />
+        <ImageView
+            android:id="@+id/tfseer_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_4sdp"
+            android:src="@drawable/tfseer_new_quran_page"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toEndOf="@id/view4"
+            app:layout_constraintWidth_percent="0.06"
+            />
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_4sdp"
+
+            android:src="@drawable/search_quran_page"
+            app:layout_constraintBottom_toTopOf="@id/tfseer_icon"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toEndOf="@id/view4"
+            app:layout_constraintWidth_percent="0.06"
+            />
+        <ImageView
+            android:id="@+id/juzz_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_4sdp"
+
+            android:src="@drawable/juzz_quran_page"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toEndOf="@id/view4"
+            app:layout_constraintWidth_percent="0.06"
+            />
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_with_obasity"
+            app:layout_constraintTop_toBottomOf="@id/fragQuran_Juzz"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_with_obasity"
+            app:layout_constraintTop_toBottomOf="@id/fragQuran_search"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_with_obasity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

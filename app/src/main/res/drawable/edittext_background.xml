@@ -7,7 +7,7 @@
         android:color="@color/ed_background"
         />
     <corners
-        android:radius="@dimen/_15sdp" />
+        android:radius="@dimen/_2sdp" />
 
 
 

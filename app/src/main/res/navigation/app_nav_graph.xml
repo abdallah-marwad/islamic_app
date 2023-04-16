@@ -12,22 +12,14 @@
         tools:layout="@layout/fragment_prayer" />
     <fragment
         android:id="@+id/alarmFragment"
-        android:name="com.example.prayertimequran.ui.fragments.AlarmFragment"
+        android:name="com.example.prayertimequran.ui.fragments.settings.SettingFragment"
         android:label="fragment_alarm"
-        tools:layout="@layout/fragment_alarm" />
-    <fragment
-        android:id="@+id/qublaFragment"
-        android:name="com.example.prayertimequran.ui.fragments.QublaFragment"
-        android:label="fragment_qubla"
-        tools:layout="@layout/fragment_qubla" />
-    <fragment
-        android:id="@+id/quranFragment"
-        android:name="com.example.prayertimequran.ui.fragments.quran.quranContainer.QuranContainerFragment"
-        android:label="fragment_kaaba"
-        tools:layout="@layout/fragment_page_quran" />
+        tools:layout="@layout/fragment_setting" />
+
+
     <fragment
         android:id="@+id/azkarFragment"
-        android:name="com.example.prayertimequran.ui.fragments.azkarHome.home.AzkarFragment"
+        android:name="com.example.prayertimequran.ui.fragments.azkar.home.AzkarFragment"
         android:label="fragment_azkar"
         tools:layout="@layout/fragment_azkar" >
         <action
@@ -36,11 +28,75 @@
     </fragment>
     <fragment
         android:id="@+id/azkarDetailsFragment"
-        android:name="com.example.prayertimequran.ui.fragments.azkarHome.details.AzkarDetailsFragment"
+        android:name="com.example.prayertimequran.ui.fragments.azkar.details.AzkarDetailsFragment"
         android:label="fragment_azkar_details"
         tools:layout="@layout/fragment_azkar_details" >
         <argument
             android:name="TheNameOfZekr"
             app:argType="string" />
+
     </fragment>
+
+
+    <fragment
+        android:id="@+id/quranContainerFragment"
+        android:name="com.example.prayertimequran.ui.fragments.quran.quranCategories.quranCategoryContainer.QuranContainerFragment"
+        android:label="fragment_quran_container2"
+        tools:layout="@layout/fragment_quran_container2" >
+        <argument
+            android:name="currentItem"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_quranContainerFragment_to_quranPageContainerFragment2"
+            app:destination="@id/quranPageContainerFragment2" />
+        <action
+            android:id="@+id/action_quranContainerFragment_to_quranSearchFragment"
+            app:destination="@id/quranSearchFragment" />
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/quranPageContainerFragment2"
+        android:name="com.example.prayertimequran.ui.fragments.quran.quranPages.quranPageContainer.QuranPageContainerFragment"
+        android:label="fragment_quran_page_container"
+        tools:layout="@layout/fragment_quran_page_container" >
+        <argument
+            android:name="currentPageNumber"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quranPageContainerFragment2_to_quranContainerFragment"
+            app:destination="@id/quranContainerFragment" />
+        <action
+            android:id="@+id/action_quranPageContainerFragment2_to_tfseerFragment"
+            app:destination="@id/tfseerFragment" />
+        <action
+            android:id="@+id/action_quranPageContainerFragment2_to_quranSearchFragment"
+            app:destination="@id/quranSearchFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/tfseerFragment"
+        android:name="com.example.prayertimequran.ui.fragments.quran.quranTfseer.TfseerFragment"
+        android:label="fragment_tfseer"
+        tools:layout="@layout/fragment_tfseer" >
+        <argument
+            android:name="pageNum"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/quranSearchFragment"
+        android:name="com.example.prayertimequran.ui.fragments.quran.searchFragment.QuranSearchFragment"
+        android:label="fragment_quran_search2"
+        tools:layout="@layout/fragment_quran_search2" >
+
+
+        <action
+            android:id="@+id/action_quranSearchFragment_to_quranPageContainerFragment23"
+            app:destination="@id/quranPageContainerFragment2" />
+    </fragment>
+
+
 </navigation>
