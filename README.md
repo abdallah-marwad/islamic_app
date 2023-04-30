@@ -8,14 +8,13 @@ time for the next prayer with timer
 - The app consist of 12 screen
 
 
-
 **App on Google Play :**
 [click here](https://play.google.com/store/apps/details?id=com.abdallah.prayertimequran)
 
 **Screenshots**
 
 
-<img src="https://user-images.githubusercontent.com/115652759/235350797-57e927ca-9060-4be9-81ae-9b1438210e83.jpg" width="200" height="350">
+<img src="https://user-images.githubusercontent.com/115652759/235350862-eeae34a1-72dc-4e8c-a86d-2538a3a0482f.jpg" width="200" height="350">
 <img src="https://user-images.githubusercontent.com/115652759/232264231-66af3a58-250f-4554-98eb-a912cc76fa8a.png" width="200" height="350">
 <img src="https://user-images.githubusercontent.com/115652759/232264432-07ed6421-52b3-4d14-af73-ce9c9e68713b.png" width="200" height="350">
 <img src="https://user-images.githubusercontent.com/115652759/232264818-4109bf5b-3b39-4b38-9356-4910f14f1de1.png" width="200" height="350">
