@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237016269000",
+    "project_id": "kntq-57c83",
+    "storage_bucket": "kntq-57c83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237016269000:android:eca6874da6ebf8d213a5fd",
+        "android_client_info": {
+          "package_name": "com.abdallah.prayertimequran"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237016269000-3fff6n5qj7cjnem1frdi38fcgm1un9g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGbU0YB5PX6Io8JDVnPBVCRZBo-e2w-Do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237016269000-3fff6n5qj7cjnem1frdi38fcgm1un9g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

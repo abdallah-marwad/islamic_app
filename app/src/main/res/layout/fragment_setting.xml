@@ -74,10 +74,10 @@
         android:id="@+id/refresh"
         android:layout_width="match_parent"
         style="@style/text_frag_setting_style"
-        android:text="تحديث مواقيت الصلوات والمنبه"
+        android:text="تحديث مواقيت الصلوات والمنبه يدويا"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintTop_toBottomOf="@id/quran_finish"
-        app:drawableStartCompat="@drawable/refresh" />
+        android:drawableStart="@drawable/refresh" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -88,13 +88,65 @@
         app:layout_constraintTop_toBottomOf="@id/refresh"
         />
     <TextView
+        android:id="@+id/timing"
+        android:layout_width="match_parent"
+        style="@style/text_frag_setting_style"
+        android:text=" تحديد التوقيت الصيفي او الشتوي"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/refresh"
+        android:drawableStart="@drawable/time_detect" />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/custom_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_6sdp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/refresh"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/search_gereen"
+
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/timing"
+        />
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        style="@style/text_frag_setting_style"
+        android:text="سياسه الخصوصيه"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/timing"
+        android:drawableStart="@drawable/baseline_privacy_tip_24" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ed_background"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/privacy"
+        />
+    <TextView
         android:id="@+id/aboutUs"
         android:layout_width="match_parent"
         style="@style/text_frag_setting_style"
         android:drawableStart="@drawable/baseline_info_24"
         android:text="@string/about_us"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintTop_toBottomOf="@id/refresh" />
+        app:layout_constraintTop_toBottomOf="@id/privacy" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_2sdp"
+    android:elevation="@dimen/_15sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/shimmer"
+
+    >
 
     <TextView
         android:id="@+id/custom_search_sora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_16sdp"
-
+        android:background="@color/search_gereen"
         android:textColor="@color/black"
-        android:layout_margin="@dimen/_8sdp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_16sdp"
+        android:padding="@dimen/_6sdp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/custom_search_ayaNm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16sdp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="@dimen/_6sdp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/custom_search_sora"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/custom_search_ayaNm"
         />
     <TextView
         android:id="@+id/custom_search_aya"
@@ -20,18 +52,10 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/_14sdp"
         android:textColor="@color/black"
-        android:layout_marginHorizontal="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        app:layout_constraintTop_toBottomOf="@+id/custom_search_sora"
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@+id/custom_search_ayaNm"
 
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/ed_background"
-        android:layout_marginTop="@dimen/_4sdp"
-        android:layout_marginHorizontal="@dimen/_14sdp"
 
-        app:layout_constraintTop_toBottomOf="@id/custom_search_aya"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

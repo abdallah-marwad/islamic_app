@@ -11,7 +11,7 @@
 
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/quran_logo_app"
+        android:src="@drawable/quran_logo_app_removebg"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
@@ -45,21 +45,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome"
         app:layout_constraintWidth_percent="0.8" />
+
     <Button
         android:id="@+id/setUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.7"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/card_background"
+        android:padding="@dimen/_5sdp"
         android:text="@string/start"
         android:textColor="@color/white"
         android:textSize="@dimen/_15ssp"
-        android:layout_margin="@dimen/_5sdp"
-        android:padding="@dimen/_5sdp"
         android:textStyle="bold"
-        android:background="@color/card_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spinner"
@@ -80,5 +81,19 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/lottie_couple_reading" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.24"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading_green" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

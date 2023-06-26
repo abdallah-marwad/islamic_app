@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">  الـصلاه و القرآن</string>
+    <string name="app_name">  الـصلاة و القرآن</string>
     <string name="alarm">التنبيهات</string>
     <string name="prayer">الـصلاه</string>
     <string name="qebla">القـبله</string>
@@ -58,5 +58,5 @@
     <string name="manual_refresh">تحديث البيانات يدويا</string>
     <string name="refresh_txt">تحديث  </string>
     <string name="dont_refresh">تخطي  </string>
-    <string name="refresh_dialog_msg">في حاله لم يتم تحديث بيانات الصلاوات او توقفت المنبات بسبب عطل ما قم بالتحديث يدويا وستتم حل المشكله .</string>
+    <string name="refresh_dialog_msg">في حاله لم يتم تحديث بيانات الصلاوات او توقفت المنبهات بسبب عطل ما قم بالتحديث يدويا وستتم حل المشكله .</string>
 </resources>

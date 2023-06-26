@@ -23,6 +23,7 @@
         android:textColor="@color/black"
         android:textColorHint="@color/gray_icons"
         app:endIconMode="clear_text"
+
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="6dp" />
 

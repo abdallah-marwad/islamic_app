@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_8sdp"
-    >
+    android:layout_margin="@dimen/_8sdp">
 
 
     <TextView
@@ -38,49 +37,50 @@
         android:id="@+id/customZekrDetails_count"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.45"
-        android:gravity="center"
         android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/zekr_counter_bg"
+        android:gravity="center"
         android:padding="@dimen/_1sdp"
         android:textColor="@color/black"
-        android:background="@drawable/zekr_counter_bg"
         android:textSize="@dimen/_12ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/custom_szekrNumber"
         app:layout_constraintStart_toEndOf="@+id/custom_szekrNumber"
-        app:layout_constraintTop_toTopOf="@+id/custom_szekrNumber" />
+        app:layout_constraintTop_toTopOf="@+id/custom_szekrNumber"
+        app:layout_constraintWidth_percent="0.45" />
 
     <TextView
         android:id="@+id/customZekrDetails_zekr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
         android:textColor="@color/black"
         android:textSize="@dimen/_13ssp"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/_4sdp"
         app:layout_constraintTop_toBottomOf="@+id/custom_szekrNumber" />
 
-            <TextView
-                android:id="@+id/customZekrDetails_refrence"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_13ssp"
-                app:layout_constraintTop_toBottomOf="@id/customZekrDetails_zekr"
+    <TextView
+        android:id="@+id/customZekrDetails_refrence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@id/customZekrDetails_zekr"
 
-                />
+        />
 
-            <TextView
-                android:id="@+id/customZekrDetails_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_13ssp"
-                app:layout_constraintTop_toBottomOf="@id/customZekrDetails_refrence"
+    <TextView
+        android:id="@+id/customZekrDetails_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@id/customZekrDetails_refrence"
 
-                />
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

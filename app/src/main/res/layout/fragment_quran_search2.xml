@@ -25,6 +25,8 @@
         android:textColor="@color/black"
         android:textColorHint="@color/gray_icons"
         app:endIconMode="clear_text"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/appbar"
         tools:layout_editor_absoluteX="6dp" />
 
@@ -32,8 +34,6 @@
         android:id="@+id/frag_search_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:padding="@dimen/_6sdp"
         android:layoutAnimation="@anim/layout_animation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frag_search_et" />

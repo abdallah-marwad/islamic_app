@@ -19,9 +19,23 @@
         android:id="@+id/fragTfseer_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:layoutAnimation="@anim/layout_animation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tfseerFrag_appbar" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/tfseer_lottie_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tfseerFrag_appbar"
+        app:layout_constraintWidth_percent="0.24"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading_green" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

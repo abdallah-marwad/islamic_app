@@ -12,12 +12,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/appbar_light_green</item>
         <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowIsTranslucent">true</item>
 
         <!-- specify enter and exit transitions -->
 
 
         <!-- Customize your theme here. -->
     </style>
+
 
     <!-- Main Fragment -->
 
@@ -60,7 +62,6 @@
         <item name="android:padding">@dimen/_6sdp</item>
         <item name="android:layout_margin">@dimen/_6sdp</item>
         <item name="android:drawablePadding">@dimen/_6sdp</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:layout_height">0dp</item>
 
 
